@@ -1,0 +1,16 @@
+{
+  "name": "tkn-js-example",
+  "version": "0.1.0",
+  "description": "An example script that queries TKN data using Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kindnesss.eth",
+  "license": "ISC",
+  "dependencies": {
+    "@ensdomains/ensjs": "^3.4.3",
+    "viem": "^1.21.4"
+  },
+  "type": "module"
+}
