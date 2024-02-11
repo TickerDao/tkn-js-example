@@ -12,7 +12,7 @@ import { getTextRecord } from '@ensdomains/ensjs/public'
   })
 
   const records = await client.getRecords({
-    name: 'matic.tkn.eth',
+    name: 'snx.tkn.eth',
     coins: ['ETH', 'SOL', 'OP', 'ARB1', 'AVAXC', 'BNB', 'CRO', 'FTM', 'GNO', 'MATIC', 'NEAR', 'TRX', 'ZIL', 'BASE'],
     texts: [
       'name', // Project name
@@ -37,8 +37,8 @@ import { getTextRecord } from '@ensdomains/ensjs/public'
       'git', // Source code URL
       'governanceContract', // Governance contract address
       'canonicalDexPool', // Primary DEX pool URL
-    ]
-    // contenthash: true
+    ],
+    contentHash: true
   })
 
   console.log(records)

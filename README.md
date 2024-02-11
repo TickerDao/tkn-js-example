@@ -41,8 +41,8 @@ import { getTextRecord } from '@ensdomains/ensjs/public'
       'git', // Source code URL
       'governanceContract', // Governance contract address
       'canonicalDexPool', // Primary DEX pool URL
-    ]
-    // contenthash: true
+    ],
+    contentHash: true
   })
 
   console.log(records)
