@@ -5,7 +5,7 @@ import { createEnsPublicClient } from '@ensdomains/ensjs'
 import { getTextRecord } from '@ensdomains/ensjs/public'
 
 (async () => {
-  const client = createEnsPublicClient({ chain: mainnet, transport: http(), })
+  const client = createEnsPublicClient({ chain: mainnet, transport: http() })
 
   const token = 'link';
   const records = await client.getRecords({
@@ -33,7 +33,7 @@ import { getTextRecord } from '@ensdomains/ensjs/public'
       'abi', // ABI interface for the token contract
       'git', // Source code URL
       'governanceContract', // Governance contract address
-      'canonicalDexPool', // Primary DEX pool URL
+      'canonicalDexPool' // Primary DEX pool URL
     ],
     contentHash: true
   })
