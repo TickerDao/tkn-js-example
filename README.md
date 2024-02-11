@@ -9,14 +9,11 @@ import { createEnsPublicClient } from '@ensdomains/ensjs'
 import { getTextRecord } from '@ensdomains/ensjs/public'
 
 (async () => {
-  // Create the client
-  const client = createEnsPublicClient({
-    chain: mainnet,
-    transport: http(),
-  })
+  const client = createEnsPublicClient({ chain: mainnet, transport: http(), })
 
+  const token = 'link';
   const records = await client.getRecords({
-    name: 'matic.tkn.eth',
+    name: `${token}.tkn.eth`,
     coins: ['ETH', 'SOL', 'OP', 'ARB1', 'AVAXC', 'BNB', 'CRO', 'FTM', 'GNO', 'MATIC', 'NEAR', 'TRX', 'ZIL', 'BASE'],
     texts: [
       'name', // Project name
@@ -45,6 +42,17 @@ import { getTextRecord } from '@ensdomains/ensjs/public'
     contentHash: true
   })
 
-  console.log(records)
+  console.log(`Data for ${token}:`, records)
+  // records.texts: 
+  // (Returns array of addresses)
+  // [{id: 60, name: 'eth', value: '0x514910771AF9Ca656af840dff83E8264EcF986CA'}]
+
+  // records.coins
+  // (Returns array of data)
+  // [{key: 'name', value: 'Chainlink'}, {key: 'url', value: 'https://chain.link/'}]
+
+  // records.contentHash
+  // (Returns dWeb IPFS CID)
+  // 'bafybeibeyaoc7y4nvoleq5x3mo3o4a4jazhvrogu236indpzhqkzbaxowu'
 })();
 ```
