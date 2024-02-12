@@ -22,6 +22,7 @@ import { getTextRecord } from '@ensdomains/ensjs/public'
       'com.github', // GitHub organization name
       'com.discord', // Discord server invite string
       'version', // Metadata versioning identifier
+      'symbol', // Returns the token symbol from the reverse resolver (i.e. 'LINK' for Chainlink)
       // Upcoming datapoints placeholders
       'tokenSupply', // Total number of tokens created
       'circulatingSupply', // Total number of tokens in circulation
